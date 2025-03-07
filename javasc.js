@@ -1,8 +1,8 @@
-let musicas = ["https://open.spotify.com/embed/track/6IPwKM3fUUzlElbvKw2sKl","https://open.spotify.com/embed/track/0cP8fL9xvi8OYisR8OJuzN","",""];
-let textos = ["texto brendon","Querida futura esposa, escrevo esta mensagem para celebrar este dia especial em homenagem a você, uma mulher única, que tenho a sorte de estar ao seu lado.Sendo eu apenas um pequeno príncipe que teve a oportunidade de ter uma rosa para chamar de minha tão bela, inteligente e, acima de tudo, alguém que sempre estará ao meu lado. ❤️❤️❤️Parabéns para você, minha vida! Te amo. ❤️","",""];
-let imgs = [["brendo1.jpeg","brendo2.jpeg","brendo3.jpeg","brendo4.jpeg"],["gustavo1.jpeg","gustavo2.jpeg","gustavo3.jpeg","gustavo4.jpeg"],["","","","",""],["","","","",""],["","","","",""],];
-let texto = ["Brendon ❤️ Ana Clara","Gustavo ❤️ Carina","Brendon ❤️ Ana Clara","Brendon ❤️ Ana Clara"];
-let data = ["2024-12-25","2024-10-11"]
+let musicas = ["https://open.spotify.com/embed/track/6IPwKM3fUUzlElbvKw2sKl","https://open.spotify.com/embed/track/0cP8fL9xvi8OYisR8OJuzN","https://open.spotify.com/embed/album/5O5pnKHDJrwvL6w9Ne1mka",""];
+let textos = ["texto brendon","Querida futura esposa, escrevo esta mensagem para celebrar este dia especial em homenagem a você, uma mulher única, que tenho a sorte de estar ao seu lado.Sendo eu apenas um pequeno príncipe que teve a oportunidade de ter uma rosa para chamar de minha tão bela, inteligente e, acima de tudo, alguém que sempre estará ao meu lado. ❤️❤️❤️Parabéns para você, minha vida! Te amo. ❤️","Nesse dia especial, gostaria de dedicar essa mensagem a mulher que mais encanta minha vida. Um presente mais que especial, pra essa mulher que merece o mundo.Tenho sorte de você ser a mulher da minha vida e serei mais feliz ainda tendo você para todo o sempre.Eu te amo com todo o meu ser e desejo que esse dia seja muito mais que especial.❤"];
+let imgs = [["brendo1.jpeg","brendo2.jpeg","brendo3.jpeg","brendo4.jpeg"],["gustavo1.jpeg","gustavo2.jpeg","gustavo3.jpeg","gustavo4.jpeg"],["thadeu1.jpg","thadeu2.jpg","thadeu3.jpg","thadeu4.jpg"],["","","","",""],["","","","",""],];
+let texto = ["Brendon ❤️ Ana Clara","Gustavo ❤️ Carina","Thadeu ❤️ Kary Trajano","Brendon ❤️ Ana Clara"];
+let data = ["2024-12-25","2024-10-11","2022-06-27"]
 function aparecerInput(){
     document.querySelector(".click").style.display = 'none';
     let ocutos = document.querySelectorAll(".ocuto");
@@ -14,7 +14,7 @@ function aparecerInput(){
 function codigo(){
     console.log("entrou")
     let senha = document.querySelector(".InputSenha").value;
-    if(senha ==="chuchu" || senha === "chocolateG" ){
+    if(senha ==="chuchu" || senha === "xibiru" || senha ==="jubibis" || senha === "ssssssssssss" ){
         let ocutos = document.querySelectorAll(".ocuto");
     ocutos.forEach(element => {
         element.style.display = "none";
@@ -24,8 +24,14 @@ function codigo(){
         if(senha === "chuchu"){
             pessoa(0);
         }
-        else if(senha === "chocolateG"){
+        else if(senha === "xibiru"){
             pessoa(1);
+        }
+        else if(senha === "jubibis"){
+            pessoa(2);
+        }
+        else if(senha === "sssssss"){
+            pessoa(2);
         }
     }
 }

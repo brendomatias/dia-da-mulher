@@ -3,9 +3,6 @@ body{
 }
 
 
-
-
-
 /*senha*/
 .senha{
   width: 100vw;
@@ -58,7 +55,7 @@ label{
 
 /*conteudo principal*/
 .conteudo{
-
+  padding: 5rem 0 ;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   display: none;
@@ -90,6 +87,7 @@ label{
     justify-content: center;
     gap: 1rem;
     align-items: center;
+    padding-top: 2rem;
   }
 .logo{
   height: 5rem;
