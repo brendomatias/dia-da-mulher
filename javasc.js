@@ -1,8 +1,13 @@
-let musicas = ["https://open.spotify.com/embed/track/6IPwKM3fUUzlElbvKw2sKl","https://open.spotify.com/embed/track/0cP8fL9xvi8OYisR8OJuzN","https://open.spotify.com/embed/album/5O5pnKHDJrwvL6w9Ne1mka",""];
-let textos = ["texto brendon","Querida futura esposa, escrevo esta mensagem para celebrar este dia especial em homenagem a você, uma mulher única, que tenho a sorte de estar ao seu lado.Sendo eu apenas um pequeno príncipe que teve a oportunidade de ter uma rosa para chamar de minha tão bela, inteligente e, acima de tudo, alguém que sempre estará ao meu lado. ❤️❤️❤️Parabéns para você, minha vida! Te amo. ❤️","Nesse dia especial, gostaria de dedicar essa mensagem a mulher que mais encanta minha vida. Um presente mais que especial, pra essa mulher que merece o mundo.Tenho sorte de você ser a mulher da minha vida e serei mais feliz ainda tendo você para todo o sempre.Eu te amo com todo o meu ser e desejo que esse dia seja muito mais que especial.❤"];
-let imgs = [["brendo1.jpeg","brendo2.jpeg","brendo3.jpeg","brendo4.jpeg"],["gustavo1.jpeg","gustavo2.jpeg","gustavo3.jpeg","gustavo4.jpeg"],["thadeu1.jpg","thadeu2.jpg","thadeu3.jpg","thadeu4.jpg"],["","","","",""],["","","","",""],];
-let texto = ["Brendon ❤️ Ana Clara","Gustavo ❤️ Carina","Thadeu ❤️ Kary Trajano","Brendon ❤️ Ana Clara"];
-let data = ["2024-12-25","2024-10-11","2022-06-27"]
+let musicas = ["https://open.spotify.com/embed/track/6IPwKM3fUUzlElbvKw2sKl","https://open.spotify.com/embed/track/0cP8fL9xvi8OYisR8OJuzN","https://open.spotify.com/embed/album/5O5pnKHDJrwvL6w9Ne1mka","https://open.spotify.com/embed/track/0IF9rfUDnqe1aGqboZH14u","https://open.spotify.com/embed/track/1NopgVCMVhCKIm64tF7auX"];
+
+let textos = ["texto brendon","Querida futura esposa, escrevo esta mensagem para celebrar este dia especial em homenagem a você, uma mulher única, que tenho a sorte de estar ao seu lado.Sendo eu apenas um pequeno príncipe que teve a oportunidade de ter uma rosa para chamar de minha tão bela, inteligente e, acima de tudo, alguém que sempre estará ao meu lado. ❤️❤️❤️Parabéns para você, minha vida! Te amo. ❤️","Nesse dia especial, gostaria de dedicar essa mensagem a mulher que mais encanta minha vida. Um presente mais que especial, pra essa mulher que merece o mundo.Tenho sorte de você ser a mulher da minha vida e serei mais feliz ainda tendo você para todo o sempre.Eu te amo com todo o meu ser e desejo que esse dia seja muito mais que especial.❤","Meu amor, hoje é o Dia das Mulheres, mas para mim, todos os dias são teus. Teu sorriso me traz felicidade, teu carinho me conforta, tua presença me envolve, e teu amor ilumina minha vida. Sou imensamente sortudo por ter você ao meu lado. Feliz dia, minha pequena, porque especial como você não existe outra!","Amar você é a melhor parte da minha vida"];
+
+let imgs = [["brendo1.jpeg","brendo2.jpeg","brendo3.jpeg","brendo4.jpeg"],["gustavo1.jpeg","gustavo2.jpeg","gustavo3.jpeg","gustavo4.jpeg"],["thadeu1.jpg","thadeu2.jpg","thadeu3.jpg","thadeu4.jpg"],["artur1.jpg","artur2.jpg","artur3.jpg","artur4.jpg"],["francis1.jpg","francis2.jpg","francis3.jpg","francis4.jpg"]];
+
+let texto = ["Brendon ❤️ Ana Clara","Gustavo ❤️ Carina","Thadeu ❤️ Kary Trajano","Artur ❤️ Sabrina","Francis ❤️ Yohanne"];
+
+let data = ["2024-12-25","2024-10-11","2022-06-27","2024-11-30","2023-10-10",]
+
 function aparecerInput(){
     document.querySelector(".click").style.display = 'none';
     let ocutos = document.querySelectorAll(".ocuto");
@@ -14,7 +19,7 @@ function aparecerInput(){
 function codigo(){
     console.log("entrou")
     let senha = document.querySelector(".InputSenha").value;
-    if(senha ==="chuchu" || senha === "xibiru" || senha ==="jubibis" || senha === "ssssssssssss" ){
+    if(senha ==="chuchu" || senha === "xibiru" || senha ==="jubibis" || senha === "1812"|| senha === "1010"  ){
         let ocutos = document.querySelectorAll(".ocuto");
     ocutos.forEach(element => {
         element.style.display = "none";
@@ -30,8 +35,11 @@ function codigo(){
         else if(senha === "jubibis"){
             pessoa(2);
         }
-        else if(senha === "sssssss"){
-            pessoa(2);
+        else if(senha === "1812"){
+            pessoa(3);
+        }
+        else if(senha === "1010"){
+            pessoa(4);
         }
     }
 }
