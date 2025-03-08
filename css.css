@@ -53,6 +53,8 @@ label{
 }
 
 
+
+
 /*conteudo principal*/
 .conteudo{
   padding: 5rem 0 ;
@@ -71,7 +73,8 @@ label{
   align-items: center;
   overflow: hidden;
   gap: 1rem;
-    }
+}
+
 
 .linha{
     width: 100%;
@@ -96,13 +99,14 @@ label{
 }
 .carrosel{
   width: 23rem;
-  height: 30rem;
+  height: 40rem;
   background-color: black;
   border-radius: 1rem;
   border-radius: 2rem;
   position: relative;
   display: flex;
   overflow: hidden;
+  border: 2px solid black;
 }
 
 
@@ -146,10 +150,80 @@ label{
   height: 100%;
   background-color: rgb(0, 0, 0);
   object-fit: cover;
-  transition: 0.3s;
+  transition: 0.6s;
+  position: absolute;
+  left: 0;
+
 }
 
 #descricao{
   text-align: center;
   width: 30rem;
 }
+
+.imgL{
+  display: flex;
+  position: absolute;
+  bottom: 1.5rem;
+  left: 42%;
+  gap: 1rem;
+  align-items: center;
+}
+.bolinha{
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 100%;
+  background-color: rgb(255, 255, 255);
+  transition: 0.6s;
+}
+
+@media (max-width: 1000px){
+
+  .carrosel{
+    width: 40rem;
+    height: 70rem;
+  }
+  .loveTexto{
+    font-size: 2rem;
+    width: 35rem;
+  }
+  .love{
+    font-size: 5rem;
+  }
+  #dataT{
+    font-size: 1.5rem;
+  }
+  #musica{
+    width: 40rem;
+    border: none;
+    height: 10rem;
+  }
+  #descricao{
+    font-size: 2rem;
+  }
+  .click{
+    font-size: 3.6rem;
+    padding: 2rem 5rem;
+
+  }
+  .click:hover{
+    font-size: 1.6rem;
+    padding: 3rem 6rem;
+  }
+  .InputSenha{
+    padding: 2rem 20rem;
+    padding-left: 1rem;
+    font-size: 2rem;
+  }
+  label{
+     margin: 0.6rem 0rem;
+     font-size: 2rem;
+  }
+  .btenviar{
+    margin-top: 1rem;
+    height: 6rem;
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+
