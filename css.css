@@ -1,0 +1,229 @@
+body{
+  margin: 0;
+}
+
+
+/*senha*/
+.senha{
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  background: linear-gradient(black,rgb(58, 8, 8),rgb(146, 9, 9));
+  gap: 0.2rem;
+}
+.ocuto{
+  display: none;
+}
+.click{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+  padding: 0 1rem;
+  border-radius: 0.4rem;
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+  border: 0.2rem solid rgb(185, 7, 7);
+  transition: 0.3s;
+  cursor: pointer;
+}
+.click:hover{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.7rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.4rem;
+  background-color: rgb(100, 9, 9);
+  color: rgb(255, 255, 255);
+  border: 0.2rem solid rgb(185, 7, 7);
+}
+
+.InputSenha{
+  border: none;
+  background-color: transparent;
+  border: 0.14rem solid red;
+  color: white;
+  border-radius: 0.3rem;
+  padding: 1rem 0;
+  padding-left: 1rem;
+}
+label{
+  color: white;
+  margin: 0.6rem 0rem;
+}
+
+
+
+
+/*conteudo principal*/
+.conteudo{
+  padding: 5rem 0 ;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  display: none;
+  color:white;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom, 
+    rgb(0, 0, 0),black,rgb(53, 4, 4), rgb(187, 3, 3));
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  gap: 1rem;
+}
+
+
+.linha{
+    width: 100%;
+    height: 0.1rem;
+    background-color: rgb(255, 0, 0);
+  }
+.music{
+    width: 20rem;
+    height: 7rem;
+    background-color: blue; 
+    border-radius: 0.3rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    padding-top: 2rem;
+  }
+.logo{
+  height: 5rem;
+  width: 5rem;
+  background-color: aquamarine;
+}
+.carrosel{
+  width: 23rem;
+  height: 40rem;
+  background-color: black;
+  border-radius: 1rem;
+  border-radius: 2rem;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  border: 2px solid black;
+}
+
+
+.carrosel-conteiner{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s ease-in-out; /* Desloca as imagens suavemente */
+}
+.love{
+  position: relative;
+  margin: 0;
+  margin-top: 0.3rem;
+}
+
+.loveTexto{
+  font-size: 0.9rem;
+  width: 12rem;
+  height: 1rem;
+  top: 74%;
+  left: 40%;
+  margin: 0;
+
+}
+.coracao{
+  top: 0;
+  left: 50%;
+  position: absolute;
+  color: red;
+  font-size: 20px;
+  animation: fall linear infinite;
+  user-select: none;
+}
+@keyframes fall {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(400px) rotate(360deg); opacity: 0; }
+}
+
+.tela{
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  object-fit: cover;
+  transition: 0.6s;
+  position: absolute;
+  left: 0;
+
+}
+
+#descricao{
+  text-align: center;
+  width: 30rem;
+}
+
+.imgL{
+  display: flex;
+  position: absolute;
+  bottom: 1.5rem;
+  left: 42%;
+  gap: 1rem;
+  align-items: center;
+}
+.bolinha{
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 100%;
+  background-color: rgb(255, 255, 255);
+  transition: 0.6s;
+}
+
+@media (max-width: 1000px){
+
+  .carrosel{
+    width: 40rem;
+    height: 70rem;
+  }
+  .loveTexto{
+    font-size: 2rem;
+    width: 35rem;
+  }
+  .love{
+    font-size: 5rem;
+  }
+  #dataT{
+    font-size: 1.5rem;
+  }
+  #musica{
+    width: 40rem;
+    border: none;
+    height: 10rem;
+  }
+  #descricao{
+    font-size: 2rem;
+  }
+  .click{
+    font-size: 3.6rem;
+    padding: 2rem 5rem;
+
+  }
+  .click:hover{
+    font-size: 1.6rem;
+    padding: 3rem 6rem;
+  }
+  .InputSenha{
+    padding: 2rem 20rem;
+    padding-left: 1rem;
+    font-size: 2rem;
+  }
+  label{
+     margin: 0.6rem 0rem;
+     font-size: 2rem;
+  }
+  .btenviar{
+    margin-top: 1rem;
+    height: 6rem;
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+
