@@ -57,7 +57,7 @@ function gerarCoracao(){
     let posX = Math.random() * conteine.clientWidth - 30; // Posição aleatória na tela
     coracao.style.left = `${posX}px`;
 
-    let duracao = Math.random() * 3 + 2; // Tempo de queda entre 2s e 5s
+    let duracao = Math.random() * 3 + 2; 
     coracao.style.animationDuration = `${duracao}s`;
 
     conteine.appendChild(coracao);
@@ -85,27 +85,80 @@ function tempoDeNamoro(DataFuturo){
     minutos%= 60;
     segundos %=60;
     document.getElementById("dataT").innerHTML = `${anos} anos, ${meses}  meses, ${dias}  dias, ${horas} horas, ${minutos} minutos e ${segundos}  segundos`;
+    }
+
+function MoveriMG(num){
+    let tela = document.querySelectorAll(".tela")
+    let bolinhas = document.querySelectorAll(".bolinha");
+    let cont = 3;
+    let contB = 1;
+    let i = 0;
+    tela.forEach(element=> {
+        element.src = `/fotos/${imgs[num][i]}`
+        if(i<3){
+            element.style.left = "100%";
+        }
+        i++;
+    });
     
+    setInterval(() => { 
+        if(contB !=0){
+            bolinhas[contB].style.width = "1rem";
+            bolinhas[contB].style.height = "1rem";
+            bolinhas[contB-1].style.width = "0.5rem"
+            bolinhas[contB-1].style.height = "0.5rem"
+        }
+        else{
+            bolinhas[contB].style.width = "1rem"
+            bolinhas[contB].style.height = "1rem"
+            bolinhas[3].style.width = "0.5rem"
+            bolinhas[3].style.height = "0.5rem"
+        }
+        contB = (contB+1)%4
+    }, 3000);
+    setInterval(() => { 
+    if(cont!=0){
+        tela[0].style.transition = "none";
+        tela[0].style.left = "100%"
+        tela[cont].style.transition = "0.6s";
+        tela[cont].style.left = "-100%"
+        tela[cont-1].style.transition = "0.6s";
+        tela[cont-1].style.left = "0%"
+        if(cont === 2){
+            tela[3].style.transition = "none";
+            tela[3].style.left = "100%"
+        }
     }
+    else{
+        for(let i = 1; i <4; i++){
+                tela[i].style.transition = "none";
+                tela[i].style.left = "100%";
+        }
+        tela[0].style.transition = "0.6s";
+        tela[0].style.left = "-100%"
+        tela[3].style.transition = "0.6s";
+        tela[3].style.left = "0%"
 
-    function pessoa(num) {
-        let tela = document.querySelector(".tela")
-        tela.src = `/fotos/${imgs[num][0]}`
-        let cont = 1;
-        document.querySelector("#musica").src = musicas[num];
-        document.querySelector(".loveTexto").innerHTML = texto[num];
-        document.querySelector("#descricao").innerHTML = textos[num];
-
-        setInterval(() => {
-            console.log(num)
-            tela.src = `/fotos/${imgs[num][cont]}`
-            cont++;
-            if(cont === 4){
-                cont = 0;
-            }
-        }, 3000);
-        setInterval(() => tempoDeNamoro(data[num]),1000);
     }
+    cont = (cont - 1 + 4) % 4;
+}, 3000);
+}
 
-setInterval(() => gerarCoracao(),300);
+function pessoa(num) {
+    let bolinhas = document.querySelectorAll(".bolinha");
+
+    let tela = document.querySelectorAll(".tela")
+    let telas = tela[0]
+    bolinhas[0].style.width = "1rem"
+    bolinhas[0].style.height = "1rem"
+    telas.src = `/fotos/${imgs[num][0]}`
+    document.querySelector("#musica").src = musicas[num];
+    document.querySelector(".loveTexto").innerHTML = texto[num];
+    document.querySelector("#descricao").innerHTML = textos[num];
+    MoveriMG(num);  
+    setInterval(() => gerarCoracao(),300);
+    setInterval(() => tempoDeNamoro(data[num]),1000);
+}
+
+
 
