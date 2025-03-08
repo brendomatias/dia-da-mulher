@@ -84,6 +84,7 @@ function tempoDeNamoro(DataFuturo){
     horas %= 24;
     minutos%= 60;
     segundos %=60;
+    
     document.getElementById("dataT").innerHTML = `${anos} anos, ${meses}  meses, ${dias}  dias, ${horas} horas, ${minutos} minutos e ${segundos}  segundos`;
     }
 
