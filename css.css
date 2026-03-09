@@ -200,6 +200,7 @@ label{
   }
   #descricao{
     font-size: 2rem;
+    width: 90%;
   }
   .click{
     font-size: 3.6rem;

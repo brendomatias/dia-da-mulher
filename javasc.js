@@ -107,21 +107,27 @@ function gerarCoracao(){
 function tempoDeNamoro(DataFuturo){
     let dataFinal = new Date(DataFuturo);
     let agora = new Date();
-    let diferenca = agora-dataFinal;
 
-    let segundos = Math.floor(diferenca/1000);
-    let minutos = Math.floor(segundos/60);
-    let horas = Math.floor(minutos/60);
-    let dias = Math.floor(horas/24);
-    let anos = Math.floor(dias/365);
-    dias %=365;
-    let meses = Math.floor(dias/30);
-    dias %= 30;
-    horas %= 24;
-    minutos%= 60;
-    segundos %=60;
-    document.getElementById("dataT").innerHTML = `${anos} anos, ${meses}  meses, ${dias}  dias, ${horas} horas, ${minutos} minutos e ${segundos}  segundos`;
+    let anos = agora.getFullYear() - dataFinal.getFullYear();
+    let meses = agora.getMonth() - dataFinal.getMonth();
+    let dias = agora.getDate() - dataFinal.getDate();
+    let horas = agora.getHours() - dataFinal.getHours();
+    let minutos = agora.getMinutes() - dataFinal.getMinutes();
+    let segundos = agora.getSeconds() - dataFinal.getSeconds();
+
+    // Ajustes caso algum valor seja negativo
+    if(segundos < 0){ segundos += 60; minutos--; }
+    if(minutos < 0){ minutos += 60; horas--; }
+    if(horas < 0){ horas += 24; dias--; }
+    if(dias < 0){
+        const ultimoMes = new Date(agora.getFullYear(), agora.getMonth(), 0).getDate(); // dias do mês anterior
+        dias += ultimoMes;
+        meses--;
     }
+    if(meses < 0){ meses += 12; anos--; }
+
+    document.getElementById("dataT").innerHTML = `${anos} anos, ${meses} meses, ${dias} dias, ${horas} horas, ${minutos} minutos e ${segundos} segundos`;
+}
 
 function MoveriMG(num){
     let tela = document.querySelectorAll(".tela")
