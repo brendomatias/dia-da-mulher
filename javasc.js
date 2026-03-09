@@ -1,12 +1,18 @@
-let musicas = ["https://open.spotify.com/embed/track/6IPwKM3fUUzlElbvKw2sKl","https://open.spotify.com/embed/track/0cP8fL9xvi8OYisR8OJuzN","https://open.spotify.com/embed/album/5O5pnKHDJrwvL6w9Ne1mka","https://open.spotify.com/embed/track/0IF9rfUDnqe1aGqboZH14u","https://open.spotify.com/embed/track/2plbrEY59IikOBgBGLjaoe"];
+let musicas = [
+  "https://open.spotify.com/embed/track/6IPwKM3fUUzlElbvKw2sKl",
+  "https://open.spotify.com/embed/track/0cP8fL9xvi8OYisR8OJuzN",
+  "https://open.spotify.com/embed/album/5O5pnKHDJrwvL6w9Ne1mka",
+  "https://open.spotify.com/embed/track/0IF9rfUDnqe1aGqboZH14u",
+  "https://open.spotify.com/embed/track/2plbrEY59IikOBgBGLjaoe",
+  "https://open.spotify.com/embed/track/75T4td0kzWadHVTiT7KTsf"
+];
+let textos = ["Esse era pra ser o seu presente de Dia das Mulheres, mas eu acabei me atrasando… Mas eu não ligo, porque, pra mim, todo dia deveria ser o seu dia. Você é a pessoa incrível que eu amo, e, por isso, pra mim, todo dia é seu dia. Comecei a te amar em 25/12/2024, e vou te amar até o último dos meus dias. 💖Ana Clara, te amo ontem, hoje, amanhã e para sempre. Você será sempre a minha MULHER. 😘 Te amo, chuchu! 💕","Querida futura esposa, escrevo esta mensagem para celebrar este dia especial em homenagem a você, uma mulher única, que tenho a sorte de estar ao seu lado.Sendo eu apenas um pequeno príncipe que teve a oportunidade de ter uma rosa para chamar de minha tão bela, inteligente e, acima de tudo, alguém que sempre estará ao meu lado. ❤️❤️❤️Parabéns para você, minha vida! Te amo. ❤️","Nesse dia especial, gostaria de dedicar essa mensagem a mulher que mais encanta minha vida. Um presente mais que especial, pra essa mulher que merece o mundo.Tenho sorte de você ser a mulher da minha vida e serei mais feliz ainda tendo você para todo o sempre.Eu te amo com todo o meu ser e desejo que esse dia seja muito mais que especial.❤","Meu amor, hoje é o Dia das Mulheres, mas para mim, todos os dias são teus. Teu sorriso me traz felicidade, teu carinho me conforta, tua presença me envolve, e teu amor ilumina minha vida. Sou imensamente sortudo por ter você ao meu lado. Feliz dia, minha pequena, porque especial como você não existe outra!","Amar você é a melhor parte da minha vida","texto"];
 
-let textos = ["Esse era pra ser o seu presente de Dia das Mulheres, mas eu acabei me atrasando… Mas eu não ligo, porque, pra mim, todo dia deveria ser o seu dia. Você é a pessoa incrível que eu amo, e, por isso, pra mim, todo dia é seu dia. Comecei a te amar em 25/12/2024, e vou te amar até o último dos meus dias. 💖Ana Clara, te amo ontem, hoje, amanhã e para sempre. Você será sempre a minha MULHER. 😘 Te amo, chuchu! 💕","Querida futura esposa, escrevo esta mensagem para celebrar este dia especial em homenagem a você, uma mulher única, que tenho a sorte de estar ao seu lado.Sendo eu apenas um pequeno príncipe que teve a oportunidade de ter uma rosa para chamar de minha tão bela, inteligente e, acima de tudo, alguém que sempre estará ao meu lado. ❤️❤️❤️Parabéns para você, minha vida! Te amo. ❤️","Nesse dia especial, gostaria de dedicar essa mensagem a mulher que mais encanta minha vida. Um presente mais que especial, pra essa mulher que merece o mundo.Tenho sorte de você ser a mulher da minha vida e serei mais feliz ainda tendo você para todo o sempre.Eu te amo com todo o meu ser e desejo que esse dia seja muito mais que especial.❤","Meu amor, hoje é o Dia das Mulheres, mas para mim, todos os dias são teus. Teu sorriso me traz felicidade, teu carinho me conforta, tua presença me envolve, e teu amor ilumina minha vida. Sou imensamente sortudo por ter você ao meu lado. Feliz dia, minha pequena, porque especial como você não existe outra!","Amar você é a melhor parte da minha vida"];
+let imgs = [["brendo1.jpeg","brendo2.jpeg","brendo3.jpeg","brendo4.jpeg"],["gustavo1.jpeg","gustavo2.jpeg","gustavo3.jpeg","gustavo4.jpeg"],["thadeu1.jpg","thadeu2.jpg","thadeu3.jpg","thadeu4.jpg"],["artur1.jpg","artur2.jpg","artur3.jpg","artur4.jpg"],["francis1.jpg","francis2.jpg","francis3.jpg","francis4.jpg"],["gustavoGabi1.jpeg","gustavoGabi2.jpeg","gustavoGabi3.jpeg","gustavoGabi4.jpeg"]];
 
-let imgs = [["brendo1.jpeg","brendo2.jpeg","brendo3.jpeg","brendo4.jpeg"],["gustavo1.jpeg","gustavo2.jpeg","gustavo3.jpeg","gustavo4.jpeg"],["thadeu1.jpg","thadeu2.jpg","thadeu3.jpg","thadeu4.jpg"],["artur1.jpg","artur2.jpg","artur3.jpg","artur4.jpg"],["francis1.jpg","francis2.jpg","francis3.jpg","francis4.jpg"]];
+let texto = ["Brendon ❤️ Ana Clara","Gustavo ❤️ Carina","Thadeu ❤️ Kary Trajano","Artur ❤️ Sabrina","Francis ❤️ Yohanne","Gustavo ❤️ Gabi"];
 
-let texto = ["Brendon ❤️ Ana Clara","Gustavo ❤️ Carina","Thadeu ❤️ Kary Trajano","Artur ❤️ Sabrina","Francis ❤️ Yohanne"];
-
-let data = ["2024-12-25","2024-10-11","2022-06-27","2024-11-30","2023-10-10",]
+let data = ["2024-12-25","2024-10-11","2022-06-27","2024-11-30","2023-10-10","2025-3-11"]
 
 function aparecerInput(){
     document.querySelector(".click").style.display = 'none';
@@ -40,6 +46,9 @@ function codigo(){
         }
         else if(senha === "1010"){
             pessoa(4);
+        }
+        else if(senha === "Motoca"){
+            pessoa(5);
         }
     }
 }
@@ -146,6 +155,7 @@ function MoveriMG(num){
 
 function pessoa(num) {
     let bolinhas = document.querySelectorAll(".bolinha");
+    console.log(num)
 
     let tela = document.querySelectorAll(".tela")
     let telas = tela[0]
